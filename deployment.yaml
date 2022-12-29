@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keus-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      keus: keus
+  template:
+    metadata:
+      labels:
+        keus: keus
+    spec:
+      containers:
+      - name: keus-node
+        image: 964015/kube-test:6

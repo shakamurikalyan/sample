@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: keus-service
+spec:
+  selector:
+    keus: keus
+  ports:
+  - protocol: 'TCP'
+    port: 6968
+    targetPort: 6969
+  type: LoadBalancer
+
